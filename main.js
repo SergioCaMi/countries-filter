@@ -47,15 +47,23 @@ function loopArray(country) {
         let capital = country[index].capital;
 
         //console.log(region)
+        // Justo antes de utilizarlo, comparamos todo con lowerCase.
 
+        filterName = filterName.toLowerCase();
 
-        if (name.includes(filterName) && !filterRegion) {
-            createCard(flag, name, population, region, capital);
+        console.log(filterRegion);
+
+        if (name.toLowerCase().includes(filterName)) {
+
+            if ((!filterRegion || filterRegion == 'All') || (filterRegion == region)) {
+
+                createCard(flag, name, population, region, capital);
+            }
         }
 
-        if (region == filterRegion) {
-            createCard(flag, name, population, region, capital);
-        }
+        // if (region == filterRegion) {
+        //     createCard(flag, name, population, region, capital);
+        // }
     }
 }
 
