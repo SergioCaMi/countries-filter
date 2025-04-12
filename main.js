@@ -1,7 +1,7 @@
 
 // Variables de Estado
 let countryList = []; 
-let filterName = "";
+let filterName = ""; 
 let filterRegion = ""; 
 
 getCountries();
@@ -44,7 +44,7 @@ function iterCountries(country) {
         (filterRegion === '' || filterRegion === 'All' || country.region === filterRegion)
     );
 
-    // Crea tarjetas de cada país que debe aparecer
+    // Recogemos los datos de cada país
     filteredCountries.forEach(country => {
         let flag = country.flag; 
         let name = country.name; 
