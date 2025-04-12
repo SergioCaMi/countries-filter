@@ -79,11 +79,10 @@ options.addEventListener("change", function (e) {
 let themeButton = document.querySelector(".btn-toggle");
 themeButton.addEventListener("click", function () {
     let body = document.querySelector("body");
-
-    // Alterna entre el tema claro y oscuro
+    //Ponemos o quitamos la clase light
     if (body.classList.contains("light")) {
-        body.classList.remove("light"); // Cambia al tema oscuro
+        body.classList.remove("light"); 
     } else {
-        body.classList.add("light"); // Cambia al tema claro
+        body.classList.add("light"); 
     }
 });
